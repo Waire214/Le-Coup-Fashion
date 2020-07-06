@@ -1,0 +1,95 @@
+.container{
+    background-color: rgb(27, 27, 27);
+}
+.headerstuff{
+    height: 100px;
+    width:100%vw;
+    background-color:rgb(235, 224, 79)
+    
+}
+main{
+    width: 100%;
+    height: calc(100vh - 110px);
+    margin-top: 10px;
+    text-align: center;
+    position: relative;
+}
+.glow-ball{
+    position: relative;
+    display:inline-block;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 25px 10px 0px 0px rgb(223, 94, 94);
+    background-color: blanchedalmond;
+    animation-name: glow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes glow{
+    0%{
+        background-color: rgb(32, 139, 0);
+        top: 0px;
+    }
+    50%{
+        background-color: blanchedalmond ;
+        top: 50px;
+    }
+    100%{
+        background-color: deeppink;
+        top:0px;
+    }
+}
+hr{
+    margin-top: 100px;
+    margin-bottom: 125px;
+}
+.heart{
+    background-color: rgb(255, 255, 255);
+    height:200px;
+    width: 200px;
+    position: relative;
+    transform:rotate(-45deg);
+    margin: 0 auto;
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes pulse{
+    0%{
+        background-color: red;
+    }
+    50%{
+        /*transform:scale(1);*/
+        background-color: rgba(243, 109, 109, 0.959);
+    }
+    100%{
+        background-color:blue
+    }
+}
+.heart::before,.heart::after{
+content: "";
+background-color: rgb(236, 73, 73);
+border-radius: 50%;
+position: absolute;
+height: 200px;
+width: 200px;
+}
+.heart::before{
+    background-color: blue;
+    top:-50%;
+    left: 0;
+}
+.heart::after{
+    background-color: chartreuse;
+    top:0;
+    left:50%
+}
+.lampstand{
+    background-color: rgb(255, 255, 255);
+    height:150px;
+    width: 450px;
+    position: relative;
+    margin: 0 auto;
+    transform: skew(45deg -45deg);
+}
