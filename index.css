@@ -1,5 +1,12 @@
 .container{
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(245, 191, 191);
+}
+button{
+    width: 200px;
+    height: 70px;
+    background-color: black;
+    color: rgb(238, 229, 229);
+    cursor: pointer;
 }
 .headerstuff{
     height: 100px;

@@ -25,9 +25,17 @@ console.log(templateLiterals);
 const number1 = 42;
 console.log(typeof number1);
 console.log(Number.isInteger(42));
-document.getElementById("demo").innerHTML = alert("I am learning JavaScript and I'm excited to have you here");
+alert("I am learning JavaScript and I'm excited to have you here");
 let person = {
-    firstName: Oluwatosin,
-    middleName: Oghenewaire,
-    surName: Thompson
+    firstName: 'Oluwatosin',
+    middleName: 'Oghenewaire',
+    lastName: 'Thompson',
+    fullName: function() {
+        return this.firstName + " " + this.middleName + " " + this.lastName;
+    }
 };
+console.log(person.fullName());
+var text;
+text = "<h1>" + person.fullName() + "</h1>";
+console.log(text);
+document.getElementById("demo1").innerHTML = text;
