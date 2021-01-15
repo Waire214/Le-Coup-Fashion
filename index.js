@@ -106,3 +106,4 @@ num1.forEach(myEachFunc);
 function myEachFunc(value){
     console.log("This is number " + value);
 }
+myEachFunc();
