@@ -51,6 +51,7 @@ let arrNum1 = [410, 20, 130, 540, 1050];
 console.log(arrNum1.sort(function(a,b){return b-a}));
 let arrNum3 = [2410, 120, 130, 3540, 61050];
 console.log(arrNum3.sort(function(){return 0.5 - Math.random()}));
+//Fisher Yakes method - random array sorting
 function arrSortingRandom() {
     let points = ["A", "B", "C", "D", "E"];
     let j, k;
@@ -70,7 +71,38 @@ for(let i = 0; i < arr.length; i++){
     console.log(arr[k])
     console.log(arr);
 } // I can't explain why it's inclusive of 3 but I'm guessing it's because it's an array.
+//String sorting
 let textString = "Oghenewaire";
 let textRandom = Math.floor(Math.random() * 10);
 let texting = textString[textRandom];
 console.log(texting);
+//Maximum and minimum array
+function arrMax(arr){
+    console.log(Math.max.apply(null, arr));
+}
+arrMax([1,2,3]);
+function arrayMax(arr) {
+    let len = arr.length;
+    var max = -Infinity;
+    while(len--){
+        if(arr[len] > max){
+            max = arr[len];
+        }
+    }
+    console.log(max);
+}
+arrayMax([1,2,3,4,5]);
+//sorting object arrays
+let cars = [
+    {type: "Volvo", year: 2016},
+    {type: "Saab", year: 2001},
+    {type: "BMW", year: 2010}
+];
+cars.sort(function (a,b) {
+    console.log(a.year - b.year);
+});
+let num1 = [4,5,6,7,8];
+num1.forEach(myEachFunc);
+function myEachFunc(value){
+    console.log("This is number " + value);
+}
