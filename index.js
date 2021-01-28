@@ -264,9 +264,100 @@ const objC ={
     d : 1
 };
 function objectEqual(a, b) {
-    Object.keys(a).every(myFunction);
+    let y = Object.keys(a).every(myFunction);
     function myFunction(key){
         return key === Object.keys(b);
     }
+    return y;
 }
 console.log(objectEqual(objA, objC));
+
+const strNewLine = `abc def ghi
+jkl mno pqr
+stv uwx yza`;
+function multiDArray(str) {
+    //map() will attack each array element
+    let y = str.split("\n").map(myFunction)
+    function myFunction(value) {
+        return value.split(",");
+    }
+    return y;
+}
+console.log(multiDArray(strNewLine));
+
+//generate random color
+function randomColor(colorCode) {
+    let j, i;
+    for(i = 0; i<colorCode; i++){
+        j = Math.floor(Math.random() * i);
+        let k = colorCode[i];
+        colorCode[i] = colorCode[j];
+        colorCode[j] = k;
+    }
+    let y = j.toString(16);
+    return y;
+    
+}
+console.log(randomColor(16));
+
+function hexaColor() {
+    return `#${Array.from({length : 6}).map(myFunction).join("")}`;
+    function myFunction(value) {
+        return randomColor(16);
+    }
+}
+console.log(hexaColor());
+let arrTest = [];
+arrTest.length = 6;
+arrTest[0] = randomColor(16);
+arrTest[1] = randomColor(16);
+arrTest[2] = randomColor(16);
+arrTest[3] = randomColor(16);
+arrTest[4] = randomColor(16);
+arrTest[5] = randomColor(16);
+let strArr = arrTest.join('');
+strArr = "#" + strArr;
+console.log(strArr);
+console.log(arrTest);
+
+function testFunction(toBeTested){
+    let i, element;
+    for (i = 0; i < toBeTested.length; i++) {
+        element = toBeTested[i];
+        console.log(element);
+        if(toBeTested.every(testingFunc) === true){
+            return "YES";
+        }else{
+            return "NO";
+        }
+    }
+   
+    function testingFunc(value){
+        return value >= element;
+    }
+}
+console.log(testFunction([3,5,7,9,11]));
+
+function sortingStringsAlpha(str){
+    let y = str.split(",").sort().join(",");
+    return y;
+}
+console.log(sortingStringsAlpha("z,w,a,f,e,e,bs,sb"));
+
+function vowelsStr(str, ch = ['a','e','i','o','u']){
+    let x = str.split('');
+    console.log(x);
+    return x.filter(myFunction).length;
+    function myFunction(value) {
+        return value === ch.map(value => value.split(",")).join("");
+        //indexOf(value)
+    }
+    /*if (y.length >= 2 && y.length < 5) {
+        return true;
+    }else{
+        return false;
+    }  */
+}
+console.log(vowelsStr("gsggahiuu8whnvgokajhsgg c jdieek,mhsgywg"));
+let hc = ['a','e','i','o','u'];
+console.log(hc);
