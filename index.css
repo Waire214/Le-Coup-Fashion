@@ -102,7 +102,7 @@ width: 200px;
     margin: 0 auto;
     margin-bottom: 50px;
     box-shadow: -20px 20px 5px rgb(248, 246, 246);
-    transition: all 10s ease 4s;
+    transition: all 10s ease 2s;
 }
 .lampstand::before{
     content: "";

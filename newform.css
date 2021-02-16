@@ -1,0 +1,169 @@
+*{
+    margin: 00;
+    padding: 00;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 600px){
+    body{
+        height: 100vh;
+        width: 100vw;
+    }
+    .container{
+        position: relative;
+        padding: 10px;
+        height: 95%;
+        width: 90%;
+        background-color: rgb(242, 245, 251);
+        z-index: 0;
+        box-shadow: 10px 10px 10px rgb(196, 196, 230);
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+    }
+    .container::after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: calc(100vh - 5vh);
+        width: calc(100vw - 10vw);
+        z-index: -1;
+        background-color: rgb(20, 20, 49);
+        clip-path: polygon(65% 0, 100% 0, 100% 100%, 36% 100%);
+    }
+    form{
+        height: 98%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+    }
+    .fieldset1{
+        background-color: rgba(255, 255, 255, 0.849);
+        height: 100%;
+        width: 70%;
+        padding: 10px;
+        font-size: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;    
+    }
+    
+    p{
+        font-size: 12px;
+    }
+    input{
+        height: 5vh;
+        width: 70vw;
+        color: #95a5a6;
+        font-family: "Helvetica", arial, sans-serif;
+        font-size: 18px;
+        border:1px solid #ecf0f1;
+        background:#ecf0f1;
+        padding:5px;
+        display: inline-block !important;
+        visibility: visible !important;    
+    }
+    input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    color: #95a5a6;
+    font-family: "Helvetica", arial, sans-serif;
+    font-size: 18px;
+    border:1px solid #ecf0f1;
+    background:#ecf0f1;
+    padding:5px;
+    display: inline-block !important;
+    visibility: visible !important;
+}
+    #btn{
+        background-color: rgb(24, 31, 37);
+        color: rgb(224, 224, 224);
+    }
+}
+@media only screen and (min-width: 600px){
+    body{
+        height: 100vh;
+        width: 100vw;
+    }
+    .container{
+        position: relative;
+        padding: 10px;
+        height: 95%;
+        width: 90%;
+        background-color: rgb(242, 245, 251);
+        z-index: 0;
+        box-shadow: 10px 10px 10px rgb(196, 196, 230);
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+    }
+    .container::after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: calc(100vh - 5vh);
+        width: calc(100vw - 10vw);
+        z-index: -1;
+        background-color: rgb(20, 20, 49);
+        clip-path: polygon(65% 0, 100% 0, 100% 100%, 36% 100%);
+    }
+    form{
+        height: 98%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+    }
+    .fieldset1{
+        background-color: rgba(255, 255, 255, 0.849);
+        height: 100%;
+        width: 70%;
+        padding: 10px;
+        font-size: 22px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;    
+    }
+    
+    p{
+        font-size: 18px;
+    }
+    input{
+        height: 5vh;
+        width: 70vw;
+        color: #95a5a6;
+        font-family: "Helvetica", arial, sans-serif;
+        font-size: 18px;
+        border:1px solid #ecf0f1;
+        background:#ecf0f1;
+        padding:5px;
+        display: inline-block !important;
+        visibility: visible !important;    
+    }
+    input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    color: #95a5a6;
+    font-family: "Helvetica", arial, sans-serif;
+    font-size: 18px;
+    border:1px solid #ecf0f1;
+    background:#ecf0f1;
+    padding:5px;
+    display: inline-block !important;
+    visibility: visible !important;
+}
+    #btn{
+        background-color: rgb(24, 31, 37);
+        color: rgb(224, 224, 224);
+    }
+
+}

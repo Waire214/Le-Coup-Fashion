@@ -361,3 +361,30 @@ function vowelsStr(str, ch = ['a','e','i','o','u']){
 console.log(vowelsStr("gsggahiuu8whnvgokajhsgg c jdieek,mhsgywg"));
 let hc = ['a','e','i','o','u'];
 console.log(hc);
+
+function allAlhabet(normStr){
+    let newRegex = /[^a-z]/ig;
+    let newStr = normStr.toLowerCase().replace(newRegex,"");
+    let newSet = new Set(newStr);
+    if(newSet.size === 26){
+        return true;
+    }else{
+        return false;
+    }
+}
+console.log(allAlhabet("A quick brown fox jumps over the lazy dog."));
+console.log(allAlhabet("A quick brown."));
+var uniqueInOrder=function(iterable){
+    let genArr = [];
+  //your code here - remember iterable can be a string or an array
+  for (let i = 0; i < iterable.length; i++){
+    if (iterable[i] !== iterable[i + 1]) {
+        genArr.push(iterable[i]); 
+    }
+        
+  }
+    return genArr;
+}
+ 
+
+console.log(uniqueInOrder('AAAABBBCCDAABBB'));

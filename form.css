@@ -1,0 +1,44 @@
+*{
+    margin: 00;
+    padding: 00;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clipit{
+    position: relative;
+    background-color: rgb(242, 245, 251); 
+    box-shadow: 10px 10px 10px rgb(196, 196, 230);
+    z-index: 0;
+    height: calc(100vh - 100px);
+    width: calc(100vw - 100px);
+}
+.clipit::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: calc(100vh - 100px);
+    width: calc(100vw - 100px);
+    z-index: -1;
+    background-color: rgb(20, 20, 49);
+    clip-path: polygon(65% 0, 100% 0, 100% 100%, 36% 100%);
+}
+.styleInput{
+    height: 4rem;
+    width: 13rem;
+    padding: 2rem;
+}
+.styleInput2{
+    height: 3rem;
+    width: 9rem;
+    padding: 1.2rem;
+}
+form{
+    padding: 20px;
+}
