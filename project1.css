@@ -1,0 +1,88 @@
+*{
+    margin: 00;
+    padding: 00;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    height: 110px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.calculator {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 400px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "output1 output1 output1 output1"
+      "output2 output2 output2 output2"
+      "ac ac del divide"
+      "one two three multi"
+      "four five six add"
+      "seven eight nine sub"
+      "deci zero equal equal";
+  }
+  
+#output1 {
+    display: grid;
+    justify-content: end;
+    align-items: center;
+    background-color: rgb(233, 150, 150);
+    color: rgb(20, 16, 16);
+    grid-area: output1;
+    font-size: 25px;
+    height: 70px;
+}  
+#output2{
+    grid-area: output2;
+    background-color: rgb(233, 150, 150);
+    height: 90px;
+}
+.ac { grid-area: ac; }
+  
+.del { grid-area: del; }
+  
+.divide { grid-area: divide; }
+  
+.one { grid-area: one; }
+  
+.two { grid-area: two; }
+  
+.three { grid-area: three; }
+  
+.multi { grid-area: multi; }
+  
+.four { grid-area: four; }
+  
+.five { grid-area: five; }
+  
+.six { grid-area: six; }
+  
+.add { grid-area: add; }
+  
+.seven { grid-area: seven; }
+  
+.eight { grid-area: eight; }
+  
+.nine { grid-area: nine; }
+  
+.sub { grid-area: sub; }
+  
+.deci { grid-area: deci; }
+  
+.zero { grid-area: zero; }
+  
+.equal { grid-area: equal; }
+ 
