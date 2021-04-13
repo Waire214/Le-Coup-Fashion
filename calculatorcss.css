@@ -47,7 +47,7 @@ button{
 }  
 #output2{
     grid-area: output2;
-    background-color: rgb(233, 150, 150);
+    background-color: rgb(165, 150, 233);
     height: 90px;
 }
 .ac { grid-area: ac; }
