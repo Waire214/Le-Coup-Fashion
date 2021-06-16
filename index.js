@@ -388,3 +388,56 @@ var uniqueInOrder=function(iterable){
  
 
 console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+function sumDigitsFromString(str) {
+    var sum = 0;
+    var numbers = str.match(/\d+/g).map(Number);
+    for (var i = 0; i < numbers.length; i++) {
+        sum += numbers[i]
+    }
+    return sum;
+} console.log(sumDigitsFromString("foo58 bar6cat1"))
+
+// REGEX
+//ignore case
+let ignoreCaseRegex = /code/i
+let ignoreCaseStr = "FreeCodeCamp"
+let ignoreCaseAnswer = ignoreCaseStr.match(ignoreCaseRegex)
+console.log(ignoreCaseAnswer);
+//or |
+let orRegex = /yes|no/i
+//if it matches either of the 2, the first match is returned
+let orStr = "Yesno"
+let orAnswer = orStr.match(orRegex)
+console.log(orAnswer);
+//global match - more than 1 match
+let globalRegex = /no/ig
+let globalStr = "no YesNo No"
+let globalAnswer = globalStr.match(globalRegex)
+console.log(globalAnswer);
+//wildcard match
+let wildCardRegex = /hu./g
+let wildCardStr = "the humming bird in the hut"
+let wildCardAnswer = wildCardStr.match(wildCardRegex)
+console.log(wildCardAnswer);
+//alphabet
+let alpha1Regex = /[^aeiou]/g
+let alpha1Str = "hello"
+let alpha1Answer = alpha1Str.match(alpha1Regex)
+console.log(alpha1Answer);
+//plus match
+let plusregex = /ab+/g
+let plusStr = "anoaatabyabpbb"
+let plusAnswer = plusStr.match(plusregex)
+console.log(plusAnswer);
+//zero or more match
+let zeroMregex = /go*/g
+let zeroMStr = "ggouo"
+let zeroMAnswer = zeroMStr.match(zeroMregex)
+console.log(zeroMAnswer);
+//end match
+let endregex = /(go)$/
+let endStr = "ggougo"
+let endAnswer = endStr.match(endregex)
+let endTest = endregex.test(endStr)
+console.log(endAnswer);
+console.log(endTest);
