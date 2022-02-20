@@ -441,3 +441,13 @@ let endAnswer = endStr.match(endregex)
 let endTest = endregex.test(endStr)
 console.log(endAnswer);
 console.log(endTest);
+
+function reDo(arr, d) {
+    let beginningArr = arr.slice(d);
+    console.log(beginningArr)
+    let endingArr = arr.slice(0, d);
+    console.log(endingArr)
+    let allArr = beginningArr.concat(endingArr)
+    return console.log(allArr);
+}
+reDo(initArr, 1);
